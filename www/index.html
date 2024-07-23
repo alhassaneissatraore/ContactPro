@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionnaire de Contacts Pro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Contacts Pro</h1>
+            <div class="header-actions">
+                <button id="toggleTheme" class="btn-icon"><i class="fas fa-moon"></i></button>
+                <button id="addContact" class="btn-primary"><i class="fas fa-plus"></i> Nouveau Contact</button>
+            </div>
+        </header>
+        <main>
+            <div class="search-sort">
+                <input type="text" id="searchInput" placeholder="Rechercher un contact...">
+                <select id="sortSelect">
+                    <option value="name">Trier par nom</option>
+                    <option value="date">Trier par date d'ajout</option>
+                </select>
+            </div>
+            <div id="contactList"></div>
+        </main>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle">Ajouter un contact</h2>
+                <form id="contactForm">
+                    <input type="text" id="firstName" placeholder="Prénom" required>
+                    <input type="text" id="lastName" placeholder="Nom" required>
+                    <input type="tel" id="phoneNumber" placeholder="Numéro de téléphone" required>
+                    <input type="email" id="email" placeholder="Email">
+                    <button type="submit" class="btn-primary">Sauvegarder</button>
+                    <button type="button" id="cancelBtn" class="btn-secondary">Annuler</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
